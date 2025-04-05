@@ -32,5 +32,6 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add prices-pve.json
-          git commit -m "Update prices-pve.json"
+          git mv prices-pve.json prices.json
+          git commit -m "Update prices.json"
           git push
