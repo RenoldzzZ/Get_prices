@@ -32,6 +32,7 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git rm -f prices.json
+          git commit -m "删除文件"
           git add prices-pve.json
           git mv prices-pve.json prices.json
           git commit -m "Update prices.json"
