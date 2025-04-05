@@ -4,7 +4,7 @@ on:
   push:
     branches: [ main ]
   schedule:
-    - cron: '0 * * * *' # Runs every hour
+    - cron: '0 */6 * * *' # Runs every hour
 
 permissions:
   contents: write
@@ -25,7 +25,7 @@ jobs:
       - name: Fetch prices-pve.json
         run: |
           echo "Fetching prices-pve.json..."
-          wget https://raw.githubusercontent.com/RenoldzzZ/SPT-LiveFleaPriceDB/refs/heads/main/prices-pve.json
+          wget https://raw.githubusercontent.com/DrakiaXYZ/SPT-LiveFleaPriceDB/refs/heads/main/prices-pve.json
 
       - name: Commit and push changes
         run: |
